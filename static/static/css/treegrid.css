@@ -1,0 +1,66 @@
+body{
+	font-size:12px;
+}
+.TreeGrid{
+	padding-left:10px;
+	border-collapse: collapse; 
+	font-size: 12px;
+}
+
+.TreeGrid .header{
+	background-color: #87CEEB;
+	font-size: 11px;
+	font-weight: 600;
+}
+
+.TreeGrid td{
+	padding: 0px 0px 0px 0px;
+	border-top-color: currentColor;
+	border-right-color:currentColor;
+	border-left-color:currentColor;
+	border-top-width:0px;
+	border-right-width:0px;
+	border-left-width :0px;
+	border-spacing:0;
+	border-collapse:0;
+	border-bottom: 1px solid #ddd;
+	border-top: 0px solid #ddd;
+	border-left: 0px solid #ddd;
+	border-right: 0px solid #ddd;
+	line-height: 35px;
+}
+
+.TreeGrid a{
+	text-decoration: underline;
+	color: black;
+}
+
+.TreeGrid a:hover{
+	color: blue;
+}
+
+.TreeGrid .image_hand{
+	border: 0;
+	cursor:hand;
+	align:absmiddle;
+}
+
+.TreeGrid .image_nohand{
+	border: 0;
+	align:absmiddle;
+}
+
+.odd{
+	
+	background-color :rgb(251, 251, 251);
+}
+
+.firstTr{
+	 background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    color: #666;
+    text-align: left;
+}
+.firstTd{
+	 font-weight: bold;
+}

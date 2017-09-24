@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+		
+<tiles-definitions>
+	<definition name="house.layout" extends="main.layout">
+		<put-attribute name="custom.css" value="/WEB-INF/jsp/house/css.jsp"/>
+		<put-attribute name="custom.js" value="/WEB-INF/jsp/house/js.jsp"/>
+		<put-attribute name="column-1" value="/WEB-INF/jsp/common/left.menu.jsp"/>
+	</definition>
+	
+	<definition name="to.house.statistics" extends="house.layout">
+		<put-attribute name="title" value="house.statistic"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.house.statistics.jsp"/>
+	</definition>
+	
+	<definition name="to.show.house.list" extends="house.layout">
+		<put-attribute name="title" value="to.house.manage"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.show.house.list.jsp"/>
+	</definition>
+	<definition name="to.house.message" extends="house.layout">
+		<put-attribute name="title" value="to.house.manage"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.house.message.jsp"/>
+	</definition>
+	<definition name="to.edit.house" extends="house.layout">
+		<put-attribute name="title" value="to.house.manage"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.edit.house.jsp"/>
+	</definition>
+
+	<definition name="to.house.details" extends="house.layout">
+		<put-attribute name="title" value="to.house.details"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.house.details.jsp"/>
+	</definition>
+	
+	<definition name="to.show.house.review.list" extends="house.layout">
+		<put-attribute name="title" value="house.review"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.show.house.review.list.jsp"/>
+	</definition>
+	
+	<definition name="to.show.house.carport.list" extends="house.layout">
+		<put-attribute name="title" value="house.carport.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.show.house.carport.list.jsp"/>
+	</definition>
+	
+	<definition name="to.car.port.detail" extends="house.layout">
+		<put-attribute name="title" value="house.carport.detail"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.car.port.detail.jsp"/>
+	</definition>
+	
+	<definition name="to.edit.car" extends="house.layout">
+		<put-attribute name="title" value="house.car.edit"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.edit.car.jsp"/>
+	</definition>
+	
+	<definition name="to.car.detail" extends="house.layout">
+		<put-attribute name="title" value="house.car.detail"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.car.detail.jsp"/>
+	</definition>
+	
+	<definition name="to.bind.car.port" extends="house.layout">
+		<put-attribute name="title" value="house.carport.bind"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.bind.car.port.jsp"/>
+	</definition>
+	
+	<definition name="to.show.house.car.list" extends="house.layout">
+		<put-attribute name="title" value="house.car.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.show.house.car.list.jsp"/>
+	</definition>
+	
+	<definition name="to.show.house.vehicle.records" extends="house.layout">
+		<put-attribute name="title" value="house.vehicle.records"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.show.house.vehicle.records.jsp"/>
+	</definition>
+	
+	<definition name="to.show.payment.records" extends="house.layout">
+		<put-attribute name="title" value="payment.records"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.show.payment.records.jsp"/>
+	</definition>
+	
+	<definition name="to.show.resident.focus" extends="house.layout">
+		<put-attribute name="title" value="resident.focus"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.show.resident.focus.jsp"/>
+	</definition>
+	
+	<definition name="ajax.get.unit.houses" extends="json.layout">
+		<put-attribute name="column-1" value="/WEB-INF/jsp/house/ajax.get.unit.houses.jsp"/>
+	</definition>
+	
+	<definition name="ajax.get.unit.stories" extends="json.layout">
+		<put-attribute name="column-1" value="/WEB-INF/jsp/house/ajax.get.unit.stories.jsp"/>
+	</definition>
+	
+	<definition name="ajax.get.story.houses" extends="json.layout">
+		<put-attribute name="column-1" value="/WEB-INF/jsp/house/ajax.get.story.houses.jsp"/>
+	</definition>
+	
+	<definition name="to.edit.focus.resident" extends="house.layout">
+		<put-attribute name="title" value="resident.focus"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/house/to.edit.focus.resident.jsp"/>
+	</definition>
+</tiles-definitions>

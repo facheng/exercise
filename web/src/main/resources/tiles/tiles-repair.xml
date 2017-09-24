@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="repair.layout" extends="main.layout">
+		<put-attribute name="title" value="repair.management"/>
+		<put-attribute name="custom.css" value="/WEB-INF/jsp/repair/css.jsp"/>
+		<put-attribute name="custom.js" value="/WEB-INF/jsp/repair/js.jsp"/>
+		<put-attribute name="column-1" value="/WEB-INF/jsp/common/left.menu.jsp"/>
+	</definition>
+	
+
+	<definition name="to.show.unassigned.repair.rec.list" extends="repair.layout">
+		<put-attribute name="title" value="unassigned.repair"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/repair/to.show.unassigned.repair.rec.list.jsp"/>
+	</definition>
+
+	<definition name="to.show.assigned.repair.rec.list" extends="repair.layout">
+		<put-attribute name="title" value="assigned.repair"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/repair/to.show.assigned.repair.rec.list.jsp"/>
+	</definition>
+
+	<definition name="to.create.new.repair" extends="repair.layout">
+		<put-attribute name="title" value="create.new.repair"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/repair/to.create.new.repair.jsp"/>
+	</definition>
+
+	<definition name="to.edit.repair" extends="repair.layout">
+		<put-attribute name="title" value="edit.repair"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/repair/to.edit.repair.jsp"/>
+	</definition>
+		
+	<definition name="to.repair.detail" extends="repair.layout">
+		<put-attribute name="title" value="repair.detail"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/repair/to.repair.detail.jsp"/>
+	</definition>
+
+	<definition name="to.show.repair.statistics" extends="repair.layout">
+		<put-attribute name="title" value="repair.statistics"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/repair/to.show.repair.statistics.jsp"/>
+	</definition>
+
+	<definition name="to.repair.statistic.detail" extends="repair.layout">
+		<put-attribute name="title" value="repair.statistics"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/repair/to.repair.statistic.detail.jsp"/>
+	</definition>
+	
+</tiles-definitions>

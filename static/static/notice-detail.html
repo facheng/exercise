@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<title></title>
+    <link rel="stylesheet"  href="css/base.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/base.js"></script>
+</head>
+<body>
+<div class="contains white_bg_con">
+    <div class="">
+        <div class="loginHeader">
+            <!-- 顶部欢迎开始 -->
+            <div class="login-statu">
+            	<span>您好，</span>
+            	<select>
+			 		<option>中科大2</option>
+                    <option>中科大3</option>
+    			</select>
+            	<span>物业经理！</span>
+                <a href="" title="安全退出">安全退出 &gt;</a>
+                <!--<a href="" title="免费注册">免费注册</a>-->
+            </div>
+            
+            <!-- 顶部欢迎结束 -->
+            <div class="top-nav clear">
+             	<div class="logo">
+                    <a href="" title="物业管理平台">物业管理平台</a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item">
+                    	<a class="nav-item-link " title="物业管理" href="">物业管理</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link cur" title="公告管理" href="">公告管理</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="出入统计" href="">出入统计</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="报修管理" href="">报修管理</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="账务统计" href="">账务统计</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="系统参数设置" href="">系统参数设置</a>
+                    </li>
+				</ul>
+             </div>
+             
+        </div>
+        <div class="main">
+             
+             <div class="leftnavbg clear">
+             
+             	<div class="leftNav">
+                    <h1><a href="">公告管理</a></h1>
+                    <div class="leftNav-sub">
+                        <a title="公告管理" href="notice-manage.html" class="cur">公告管理</a>
+                        <a title="BBS管理" href="" >BBS管理</a>
+                    </div>
+                </div>
+                
+                <div class="rightCon">
+                	
+                	<div class="rightNav">
+                        <h2 class="titIcon wyIcon">公告管理</h2>
+                        <div class="rightNav-sub">
+                            <a href="notice-manage.html" title="返回" class="cur">返回</a>
+                            <a href="javascript:void(0);" class="modify-notice-btn" title="修改公告信息">修改公告信息</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cont_box_wrap">
+        				<div class="msgBox category mt20">
+                            <div class="typeBox">				
+                                <div class="msgLeft">
+                                    公告类别：
+                                </div>
+                                <div class="msgRight">
+                                    物业
+                                </div>
+                            </div>
+                            <div class="addresseeBox">
+                                <div class="msgLeft">
+                                    接收对象：
+                                </div>
+                                <div class="msgRight">
+                                    租客(有暂住证)
+                                </div>
+                            </div>
+                            <div class="msgTitleBox">
+                                <div class="msgLeft">
+                                    公告标题：
+                                </div>
+                                <div class="msgRight">
+                                    我间谍胸围皮
+                                </div>
+                            </div>
+                            
+                                <div class="msgContentBox">
+                                    <div class="msgLeft">
+                                        公告内容：
+                                    </div>
+                                    <div class="msgRight">
+                                        <p>我IE偶怕打卡配啤酒覅口味</p>
+                                    </div>
+                                </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+             </div>   
+        </div>
+     	
+        <div class="footer">Copyright @2014 doubletuan.com.All Right Reserved.&nbsp;&nbsp;技术支持：上海团团科技信息有限公司 联系电话：
+        	<b>+86 (21) 6160-0112</b>
+        </div>
+     
+    </div>
+</div>
+
+<!--弹层部分-->
+
+<!--修改公告信息-->
+<div class="dialog dialog-modify-notice">
+    <div class="dialog-container ">
+    	<div class="dialog-modify-notice-con">
+        	<table width="100%" cellspacing="0" class="table_form">
+                <tbody>
+                    <tr height="50px">
+                      <th width="100">公告标题：</th>
+                      <td>
+                      	<div class="user-box-body">
+                            <input type="text"  class="form-control" value="我间谍胸围皮" placeholder="请输入公告标题">
+                            <div class="tip-normal error">
+                                <span class="errorIcon"></span>账号不能为空
+                            </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr id="msgCont">
+                      <th width="100">公告内容：</th>
+                      <td>
+                      	<div class="user-box-body">
+                            <textarea name="content" id="msgContVal" class="form-control" placeholder="" style="height:150px;">我IE偶怕打卡配啤酒覅口味</textarea>
+                            <div class="tip-normal error">
+                            	<span class="errorIcon"></span>账号不能为空
+                            </div>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                 </tbody>
+                 
+            </table>
+        </div>
+        <div class="winBtnBox mt20">
+            <a href="#" title="保存" class="btn bntbgGreen">保 存</a>	
+        </div>
+    </div>
+    <a class="icon icon-close dialog-close"></a>
+</div>
+<!--修改公告信息-->
+
+<div class="black-opacity"></div>
+<!--弹层部分-->
+
+</body>
+</html>

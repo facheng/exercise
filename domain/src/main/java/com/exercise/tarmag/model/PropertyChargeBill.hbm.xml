@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.PropertyChargeBill" table="DT_PROPERTY_CHARGE_BILL">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="houseId" type="java.lang.Long">
+			<column name="HOUSE_ID" />
+		</property>
+		<property name="startDate" type="java.util.Date">
+			<column name="START_DATE" />
+		</property>
+		<property name="endDate" type="java.util.Date">
+			<column name="END_DATE" />
+		</property>
+		<property name="amount" type="java.lang.Double">
+			<column name="AMOUNT" />
+		</property>
+		<property name="remindTimes" type="java.lang.Integer">
+			<column name="REMIND_TIMES" />
+		</property>
+		<property name="status" type="java.lang.Byte">
+			<column name="STATUS" />
+		</property>
+
+		<property name="createUserId" type="java.lang.Long">
+			<column name="CREATE_USER_ID" />
+		</property>
+		<property name="createDateTime" type="java.util.Date">
+			<column name="CREATE_DATE_TIME" />
+		</property>
+		<property name="updateUserId" type="java.lang.Long">
+			<column name="UPDATE_USER_ID" />
+		</property>
+		<property name="updateDateTime" type="java.util.Date">
+			<column name="UPDATE_DATE_TIME" />
+		</property>
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

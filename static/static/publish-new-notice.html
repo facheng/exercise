@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<title></title>
+    <link rel="stylesheet"  href="css/base.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/base.js"></script>
+</head>
+<body>
+<div class="contains white_bg_con">
+    <div class="">
+        <div class="loginHeader">
+            <!-- 顶部欢迎开始 -->
+            <div class="login-statu">
+            	<span>您好，</span>
+            	<select>
+			 		<option>中科大2</option>
+                    <option>中科大3</option>
+    			</select>
+            	<span>物业经理！</span>
+                <a href="" title="安全退出">安全退出 &gt;</a>
+                <!--<a href="" title="免费注册">免费注册</a>-->
+            </div>
+            
+            <!-- 顶部欢迎结束 -->
+            <div class="top-nav clear">
+             	<div class="logo">
+                    <a href="" title="物业管理平台">物业管理平台</a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item">
+                    	<a class="nav-item-link " title="物业管理" href="">物业管理</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link cur" title="公告管理" href="">公告管理</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="出入统计" href="">出入统计</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="报修管理" href="">报修管理</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="账务统计" href="">账务统计</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="系统参数设置" href="">系统参数设置</a>
+                    </li>
+				</ul>
+             </div>
+             
+        </div>
+        <div class="main">
+             
+             <div class="leftnavbg clear">
+             
+             	<div class="leftNav">
+                    <h1><a href="">公告管理</a></h1>
+                    <div class="leftNav-sub">
+                        <a title="公告管理" href="notice-manage.html" class="cur">公告管理</a>
+                        <a title="BBS管理" href="" >BBS管理</a>
+                    </div>
+                </div>
+                
+                <div class="rightCon">
+                	
+                	<div class="rightNav">
+                        <h2 class="titIcon wyIcon">发布新通知</h2>
+                        
+                    </div>
+                    
+                    <div class="cont_box_wrap">
+        				<div class="msgBox category mt20">
+                        	<table width="100%" cellspacing="0" class="table_form">
+                                <tbody>
+                                    <tr height="40px">
+                                        <th width="150"> 选择通知类别：	  </th>
+                                        <td class="noticeType-choice">
+                                            <label><input type="radio" name="noticeType" value="W" checked="" class="wuye-radio"><span>物业</span></label>
+                                            <label><input type="radio" name="noticeType" value="J" class="juweihu-radio"><span>居委会</span></label>
+                                            <label><input type="radio" name="noticeType" value="K" class="kuaidi-radio"><span>快递</span></label>
+                                        </td>
+                                    </tr>
+                                    <tr height="40px" class="wuye-content-hide">
+                                        <th width="150"> 选择住户身份：	  </th>
+                                        <td class="noticeType-choice">
+                                        	<label><input type="checkbox" name="IsOwner1" value="0"><span>业主</span></label>
+                                        	<label><input type="checkbox" name="IsOwner2" value="Y"><span>租客(有暂住证)</span></label>
+                                        	<label><input type="checkbox" name="IsOwner3" value="N"><span>租客(无暂住证)</span></label>
+                                        	<label><span class="crowdTips">默认不选发全体业主</span></label>
+                                        </td>
+                                    </tr>
+                                    <tr height="80px" class="kuadi-content-hide">
+                                        <th width="150"> 选择接收对象：	  </th>
+                                        <td>
+                                            <div class="user-box-body form-relative-input">
+                                                <input type="text" class="form-control" placeholder="选择接收对象" >
+                                                
+                                                <div class="tip-normal error">
+                                                    <span class="errorIcon"></span>账号不能为空
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr height="80px" class="wuye-content-hide">
+                                    	<th width="150"> 选择接收对象: </th>
+                                    	<td >
+                                        	<div class="user-box-body form-relative-input">
+                                                <input type="text" class="form-control" placeholder="选择接收对象" value="" disabled="disabled">
+                                                <span class="msgAddBtn"></span>
+                                                <div class="tip-normal error">
+                                                    <span class="errorIcon"></span>账号不能为空
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr height="50px" class="kuadi-content-hide">
+                                    	<th width="150">常用语： </th>
+                                    	<td>
+                                        	<div class="user-box-body form-relative-input">
+                                                <select class="form-control">
+                                                    <option>您有新的快递需要领取。</option>
+                                                </select>
+                                                <div class="tip-normal error">
+                                                    <span class="errorIcon"></span>账号不能为空
+                                                </div>
+                                            </div>
+                                      	</td>
+                                    </tr>
+                                    
+                                    <tr height="80px">
+                                      <th width="150"> 公告标题：	  </th>
+                                      <td>
+                                          <div class="user-box-body form-relative-input">
+                                            <input type="text" class="form-control" placeholder="">
+                                            <div class="tip-normal error">
+                                                <span class="errorIcon"></span>账号不能为空
+                                            </div>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr height="350px" class="wuye-content-hide">
+                                    	<th width="150"> 公告内容：	  </th>
+                                      	<td>
+                                            <div class="user-box-body form-relative-input">
+                                                <textarea class="form-control form-control-textarea" placeholder="请输入公告内容"></textarea>
+                                                <div class="tip-normal error">
+                                                    <span class="errorIcon"></span>账号不能为空
+                                                </div>
+                                            </div>
+                                      	</td>
+                                    </tr>
+                                    
+                                 </tbody>
+                            </table>
+                        	<div class="msgBtnBox">
+                                <a href="#" title="发布" class="btn btn-success">发 送</a>
+                                <a href="#" title="发送版本号" class="btn btn-success">发送版本号</a>
+                                <a href="notice-manage.html" title="取 消" class="btn btn-primary">取 消</a>	
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+             </div>   
+        </div>
+     	
+        <div class="footer">Copyright @2014 doubletuan.com.All Right Reserved.&nbsp;&nbsp;技术支持：上海团团科技信息有限公司 联系电话：
+        	<b>+86 (21) 6160-0112</b>
+        </div>
+     
+    </div>
+</div>
+
+<!--弹层部分-->
+
+<!--选择接收对象-->
+<div class="dialog dialog-choose-obj">
+    <div class="dialog-container ">
+    	<div class="choose-obj-dialog-con">
+        	<div class="zTreeDemoBackground left">
+				<ul class="ztree">
+                	<li class="level0" >
+                    	eeeeeee
+                    </li>
+                    <li class="level0">
+                    	4444444444
+                    </li>
+                </ul>
+			</div>
+        </div>
+        <div class="winBtnBox mt20">
+            <a href="#" title="确定" class="btn bntbgGreen">确 定</a>	
+        </div>
+    </div>
+    <a class="icon icon-close dialog-close"></a>
+</div>
+<!--选择接收对象-->
+
+<div class="black-opacity"></div>
+<!--弹层部分-->
+
+</body>
+</html>

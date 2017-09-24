@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+		
+<tiles-definitions>
+	<definition name="app.invite.layout" extends="json.layout">
+	</definition>
+	
+	<definition name="to.invitation.qrcode" extends="main.layout">
+		<put-attribute name="column-1" value="/WEB-INF/jsp/invite/to.invitation.qrcode.jsp"/>
+	</definition>
+</tiles-definitions>

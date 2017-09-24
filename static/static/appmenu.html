@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>APP菜单</title>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/treegrid.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="rightCon">
+		<div class="rightNav">
+			<h2 class="titIcon wyIcon">APP菜单管理</h2>
+			<div class="addbtn">
+				<a href="javaScript:void(0)" onClick="updateMenu()"
+					class="btn bntbgBrown" title="菜单修改">菜单修改</a>
+			</div>
+		</div>
+		<div class="" id="caidan">
+			<table id="tg1" class="TreeGrid" width="100%" cellspacing="0"
+				cellpadding="0">
+				<tbody>
+					<tr class="firstTr" height="30">
+						<td class="firstTd" align="left" width="20"></td>
+						<td class="firstTd" align="left" width="200">名称</td>
+						<td class="firstTd" align="left" width="500">URL</td>
+						<td class="firstTd" align="left" width="50">操作</td>
+					</tr>
+					<tr id="TR_0" class="odd" rowindex="0"
+						data="{configMenu:true, limit:'0', mCode:'001', mIcon:'menu_pass', mId:'1', mName:'通行宝', mType:'0', mUrl:'', pId:'0', pageNo:'0', pageSize:'0', select:true, start:'0'}"
+						open="Y" pid="">
+						<td align="left"><input type="checkbox" mcode="001" mid="1"
+							murl="" checked="true" mname="通行宝"></td>
+						<td align="left" style="text-indent: 0px;">通行宝</td>
+					</tr>
+					<tr id="TR_0_0" rowindex="1"
+						data="{configMenu:true, limit:'0', mCode:'001001', mIcon:'menu_pass_mine', mId:'2', mName:'我的通行证', mType:'2', mUrl:'', pId:'1', pageNo:'0', pageSize:'0', select:true, start:'0'}"
+						open="Y" pid="TR_0">
+						<td align="left"><input type="checkbox" mcode="001001"
+							mid="2" murl="" checked="true" mname="我的通行证"></td>
+						<td align="left" style="text-indent: 20px;">我的通行证</td>
+					</tr>
+					<tr id="TR_0_1" class="odd" rowindex="2"
+						data="{configMenu:true, limit:'0', mCode:'001002', mIcon:'menu_pass_visitor', mId:'3', mName:'访客通行证', mType:'2', mUrl:'', pId:'1', pageNo:'0', pageSize:'0', select:true, start:'0'}"
+						open="Y" pid="TR_0">
+						<td align="left"><input type="checkbox" mcode="001002"
+							mid="3" murl="" checked="true" mname="访客通行证"></td>
+						<td align="left" style="text-indent: 20px;">访客通行证</td>
+					</tr>
+					<tr id="TR_1" rowindex="3"
+						data="{configMenu:true, limit:'0', mCode:'002', mIcon:'menu_pay', mId:'4', mName:'缴费宝', mType:'0', mUrl:'', pId:'0', pageNo:'0', pageSize:'0', select:true, start:'0'}"
+						open="Y" pid="">
+						<td align="left"><input type="checkbox" mcode="002" mid="4"
+							murl="" checked="true" mname="缴费宝"></td>
+						<td align="left" style="text-indent: 0px;">缴费宝</td>
+					</tr>
+					<tr id="TR_1_0" class="odd" rowindex="4"
+						data="{configMenu:true, limit:'0', mCode:'002001', mIcon:'menu_pay_water', mId:'5', mName:'水费', mType:'1', mUrl:'http://mpay.unionpay.com/jiaofei/third/doubletuan/water?uid=st09876122', pId:'4', pageNo:'0', pageSize:'0', select:true, start:'0'}"
+						open="Y" pid="TR_1">
+						<td align="left"><input type="checkbox" mcode="002001"
+							mid="5"
+							murl="http://mpay.unionpay.com/jiaofei/third/doubletuan/water?uid=st09876122"
+							checked="true" mname="水费"></td>
+						<td align="left" style="text-indent: 20px;">水费</td>
+					</tr>
+					<tr id="TR_1_1" rowindex="5"
+						data="{configMenu:true, limit:'0', mCode:'002002', mIcon:'menu_pay_electric', mId:'6', mName:'电费', mType:'1', mUrl:'http://mpay.unionpay.com/jiaofei/third/doubletuan/electric?uid=st09876122', pId:'4', pageNo:'0', pageSize:'0', select:true, start:'0'}"
+						open="Y" pid="TR_1">
+						<td align="left"><input type="checkbox" mcode="002002"
+							mid="6"
+							murl="http://mpay.unionpay.com/jiaofei/third/doubletuan/electric?uid=st09876122"
+							checked="true" mname="电费"></td>
+						<td align="left" style="text-indent: 20px;">电费</td>
+					</tr>
+					<tr id="TR_1_2" class="odd" rowindex="6"
+						data="{configMenu:true, limit:'0', mCode:'002003', mIcon:'menu_pay_gas', mId:'7', mName:'燃气费', mType:'1', mUrl:'http://mpay.unionpay.com/jiaofei/third/doubletuan/gas?uid=st09876122', pId:'4', pageNo:'0', pageSize:'0', select:true, start:'0'}"
+						open="Y" pid="TR_1">
+						<td align="left"><input type="checkbox" mcode="002003"
+							mid="7"
+							murl="http://mpay.unionpay.com/jiaofei/third/doubletuan/gas?uid=st09876122"
+							checked="true" mname="燃气费"></td>
+						<td align="left" style="text-indent: 20px;">燃气费</td>
+					</tr>
+					<tr id="TR_1_3" rowindex="7"
+						data="{configMenu:true, limit:'0', mCode:'002004', mIcon:'menu_pay_phone', mId:'8', mName:'话费', mType:'1', mUrl:'http://mpay.unionpay.com/recharge/third/doubletuan?uid=st09876122', pId:'4', pageNo:'0', pageSize:'0', select:true, start:'0'}"
+						open="Y" pid="TR_1">
+						<td align="left"><input type="checkbox" mcode="002004"
+							mid="8"
+							murl="http://mpay.unionpay.com/recharge/third/doubletuan?uid=st09876122"
+							checked="true" mname="话费"></td>
+						<td align="left" style="text-indent: 20px;">话费</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

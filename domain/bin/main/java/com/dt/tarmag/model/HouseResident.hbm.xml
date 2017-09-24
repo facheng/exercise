@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.HouseResident" table="DT_HOUSE_RESIDENT">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="houseId" type="java.lang.Long">
+			<column name="HOUSE_ID" />
+		</property>
+		<property name="residentId" type="java.lang.Long">
+			<column name="RESIDENT_ID" />
+		</property>
+		<property name="type" type="java.lang.Byte">
+			<column name="TYPE" />
+		</property>
+		<property name="isDefault" type="java.lang.Byte">
+			<column name="IS_DEFAULT" />
+		</property>
+		<property name="isApproved" type="java.lang.Byte">
+			<column name="IS_APPROVED" />
+		</property>
+
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

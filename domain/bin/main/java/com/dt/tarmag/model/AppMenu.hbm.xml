@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.AppMenu" table="DT_APP_MENU">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="parentId" type="java.lang.Long">
+			<column name="PARENT_ID" />
+		</property>
+		<property name="menuName" type="java.lang.String">
+			<column name="MENU_NAME" />
+		</property>
+		<property name="menuCode" type="java.lang.String">
+			<column name="MENU_CODE" />
+		</property>
+		<property name="menuIcon" type="java.lang.String">
+			<column name="MENU_ICON" />
+		</property>
+		<property name="menuType" type="java.lang.Byte">
+			<column name="MENU_TYPE" />
+		</property>
+		<property name="linkURL" type="java.lang.String">
+			<column name="LINK_URL" />
+		</property>
+		<property name="seq" type="java.lang.Integer">
+			<column name="SEQ" />
+		</property>
+		<property name="isDefault" type="java.lang.Byte">
+			<column name="IS_DEFAULT" />
+		</property>
+		
+		<property name="createUserId" type="java.lang.Long">
+			<column name="CREATE_USER_ID" />
+		</property>
+		<property name="createDateTime" type="java.util.Date">
+			<column name="CREATE_DATE_TIME" />
+		</property>
+		<property name="updateUserId" type="java.lang.Long">
+			<column name="UPDATE_USER_ID" />
+		</property>
+		<property name="updateDateTime" type="java.util.Date">
+			<column name="UPDATE_DATE_TIME" />
+		</property>
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.KeyDevice" table="DT_KEY_DEVICE">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="keyName" type="java.lang.String">
+			<column name="KEY_NAME" />
+		</property>
+		<property name="deviceName" type="java.lang.String">
+			<column name="DEVICE_NAME" />
+		</property>
+		<property name="unitId" type="java.lang.Long">
+			<column name="UNIT_ID" />
+		</property>
+		<property name="storyId" type="java.lang.Long">
+			<column name="STORY_ID" />
+		</property>
+		<property name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+		<property name="deviceUuid" type="java.lang.String">
+			<column name="DEVICE_UUID" />
+		</property>
+		<property name="deviceAddress" type="java.lang.String">
+			<column name="DEVICE_ADDRESS" />
+		</property>
+		<property name="devicePassword" type="java.lang.String">
+			<column name="DEVICE_PASSWORD" />
+		</property>
+		<property name="deviceType" type="java.lang.Integer">
+			<column name="DEVICE_TYPE" />
+		</property>
+		<property name="keyType" type="java.lang.Integer">
+			<column name="KEY_TYPE" />
+		</property>
+
+		<property name="createUserId" type="java.lang.Long">
+			<column name="CREATE_USER_ID" />
+		</property>
+		<property name="createDateTime" type="java.util.Date">
+			<column name="CREATE_DATE_TIME" />
+		</property>
+		<property name="updateUserId" type="java.lang.Long">
+			<column name="UPDATE_USER_ID" />
+		</property>
+		<property name="updateDateTime" type="java.util.Date">
+			<column name="UPDATE_DATE_TIME" />
+		</property>
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

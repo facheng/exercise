@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="info.layout" extends="main.layout">
+		<put-attribute name="title" value="info.management"/>
+		<put-attribute name="custom.css" value="/WEB-INF/jsp/info/css.jsp"/>
+		<put-attribute name="custom.js" value="/WEB-INF/jsp/info/js.jsp"/>
+		<put-attribute name="column-1" value="/WEB-INF/jsp/common/left.menu.jsp"/>
+	</definition>
+	
+
+	<definition name="to.show.broadcast.list" extends="info.layout">
+		<put-attribute name="title" value="broadcast.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.show.broadcast.list.jsp"/>
+	</definition>
+	<definition name="to.edit.broadcast" extends="info.layout">
+		<put-attribute name="title" value="broadcast.edit"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.edit.broadcast.jsp"/>
+	</definition>
+	<definition name="to.broadcast.detail" extends="info.layout">
+		<put-attribute name="title" value="broadcast.detail"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.broadcast.detail.jsp"/>
+	</definition>
+	<definition name="to.show.broadcast.read.list" extends="info.layout">
+		<put-attribute name="title" value="broadcast.read.record"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.show.broadcast.read.list.jsp"/>
+	</definition>
+	
+	
+	<definition name="to.show.notice.list" extends="info.layout">
+		<put-attribute name="title" value="notice.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.show.notice.list.jsp"/>
+	</definition>
+	
+	<definition name="to.edit.notice" extends="info.layout">
+		<put-attribute name="title" value="notice.edit"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.edit.notice.jsp"/>
+	</definition>
+	<definition name="to.notice.detail" extends="info.layout">
+		<put-attribute name="title" value="notice.detail"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.notice.detail.jsp"/>
+	</definition>
+	<definition name="to.show.notice.read.list" extends="info.layout">
+		<put-attribute name="title" value="notice.read.record"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.show.notice.read.list.jsp"/>
+	</definition>
+	
+	
+	<definition name="to.show.express.delivery.list" extends="info.layout">
+		<put-attribute name="title" value="delivery.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.show.express.delivery.list.jsp"/>
+	</definition>
+	<definition name="to.edit.express.delivery" extends="info.layout">
+		<put-attribute name="title" value="delivery.edit"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.edit.express.delivery.jsp"/>
+	</definition>
+	<definition name="to.express.delivery.detail" extends="info.layout">
+		<put-attribute name="title" value="express.delivery.detail"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.express.delivery.detail.jsp"/>
+	</definition>
+	<definition name="to.show.delivery.read.list" extends="info.layout">
+		<put-attribute name="title" value="express.delivery.read.record"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/info/to.show.delivery.read.list.jsp"/>
+	</definition>
+</tiles-definitions>

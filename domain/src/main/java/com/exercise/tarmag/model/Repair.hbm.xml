@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.Repair" table="DT_REPAIR">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="unitId" type="java.lang.Long">
+			<column name="UNIT_ID" />
+		</property>
+		<property name="houseId" type="java.lang.Long">
+			<column name="HOUSE_ID" />
+		</property>
+		<property name="repairType" type="java.lang.Byte">
+			<column name="REPAIR_TYPE" />
+		</property>
+		<property name="serviceType" type="java.lang.Byte">
+			<column name="SERVICE_TYPE" />
+		</property>
+		<property name="residentId" type="java.lang.Long">
+			<column name="RESIDENT_ID" />
+		</property>
+		<property name="residentName" type="java.lang.String">
+			<column name="RESIDENT_NAME" />
+		</property>
+		<property name="phoneNum" type="java.lang.String">
+			<column name="PHONE_NUM" />
+		</property>
+		<property name="orderTime" type="java.util.Date">
+			<column name="ORDER_TIME" />
+		</property>
+		<property name="isPublic" type="java.lang.Byte">
+			<column name="IS_PUBLIC" />
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="ADDRESS" />
+		</property>
+		<property name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+		<property name="urgentState" type="java.lang.Byte">
+			<column name="URGENT_STATE" />
+		</property>
+		<property name="workTypeId" type="java.lang.Long">
+			<column name="WORK_TYPE_ID" />
+		</property>
+		<property name="workerId" type="java.lang.Long">
+			<column name="WORKER_ID" />
+		</property>
+		<property name="status" type="java.lang.Byte">
+			<column name="STATUS" />
+		</property>
+		<property name="scoreResponse" type="java.lang.Integer">
+			<column name="SCORE_RESPONSE" />
+		</property>
+		<property name="scoreDoor" type="java.lang.Integer">
+			<column name="SCORE_DOOR" />
+		</property>
+		<property name="scoreService" type="java.lang.Integer">
+			<column name="SCORE_SERVICE" />
+		</property>
+		<property name="scoreQuality" type="java.lang.Integer">
+			<column name="SCORE_QUALITY" />
+		</property>
+
+		<property name="createUserId" type="java.lang.Long">
+			<column name="CREATE_USER_ID" />
+		</property>
+		<property name="createDateTime" type="java.util.Date">
+			<column name="CREATE_DATE_TIME" />
+		</property>
+		<property name="updateUserId" type="java.lang.Long">
+			<column name="UPDATE_USER_ID" />
+		</property>
+		<property name="updateDateTime" type="java.util.Date">
+			<column name="UPDATE_DATE_TIME" />
+		</property>
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

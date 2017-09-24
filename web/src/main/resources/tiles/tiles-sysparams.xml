@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="sysparams.layout" extends="main.layout">
+		<put-attribute name="title" value="sys.params.setting"/>
+		<put-attribute name="custom.css" value="/WEB-INF/jsp/sysparams/css.jsp"/>
+		<put-attribute name="custom.js" value="/WEB-INF/jsp/sysparams/js.jsp"/>
+		<put-attribute name="column-1" value="/WEB-INF/jsp/common/left.menu.jsp"/>
+	</definition>
+	
+
+	<definition name="to.sys.set.property.charges" extends="sysparams.layout">
+		<put-attribute name="title" value="property.charges.setting"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.set.property.charges.jsp"/>
+	</definition>
+
+	<definition name="to.sys.set.carport.charges" extends="sysparams.layout">
+		<put-attribute name="title" value="carport.charges.setting"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.set.carport.charges.jsp"/>
+	</definition>
+
+	<definition name="to.sys.set.property.phone" extends="sysparams.layout">
+		<put-attribute name="title" value="property.phone.setting"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.set.property.phone.jsp"/>
+	</definition>
+
+	<definition name="to.sys.role.setting" extends="sysparams.layout">
+		<put-attribute name="title" value="role.setting"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.role.setting.jsp"/>
+	</definition>
+	
+	<definition name="to.edit.role.worker" extends="sysparams.layout">
+		<put-attribute name="title" value="role.setting"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.edit.role.worker.jsp"/>
+	</definition>
+
+	<definition name="to.sys.data.import.setting" extends="sysparams.layout">
+		<put-attribute name="title" value="data.import.setting"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.data.import.setting.jsp"/>
+	</definition>
+
+	<definition name="to.sys.data.export.setting" extends="sysparams.layout">
+		<put-attribute name="title" value="data.export.setting"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.data.export.setting.jsp"/>
+	</definition>
+
+	<definition name="to.sys.download.app" extends="sysparams.layout">
+		<put-attribute name="title" value="download.app"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.download.app.jsp"/>
+	</definition>
+
+	<definition name="to.sys.manage.app.menu" extends="sysparams.layout">
+		<put-attribute name="title" value="app.menu.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.manage.app.menu.jsp"/>
+	</definition>
+
+	<definition name="to.sys.manage.menu" extends="sysparams.layout">
+		<put-attribute name="title" value="menu.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.manage.menu.jsp"/>
+	</definition>
+
+	<definition name="to.sys.unit.summary" extends="sysparams.layout">
+		<put-attribute name="title" value="unit.summary"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.unit.summary.jsp"/>
+	</definition>
+
+	<definition name="to.sys.manage.key.device" extends="sysparams.layout">
+		<put-attribute name="title" value="key.device.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.manage.key.device.jsp"/>
+	</definition>
+	<definition name="to.edit.key.device" extends="sysparams.layout">
+		<put-attribute name="title" value="edit.key.device"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.edit.key.device.jsp"/>
+	</definition>
+	<definition name="to.key.device.detail" extends="sysparams.layout">
+		<put-attribute name="title" value="key.device.detail"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.key.device.detail.jsp"/>
+	</definition>
+	
+	<definition name="to.sys.common.words.setting" extends="sysparams.layout">
+		<put-attribute name="title" value="common.words.setting"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.common.words.setting.jsp"/>
+	</definition>
+	<definition name="to.edit.common.words" extends="sysparams.layout">
+		<put-attribute name="title" value="edit.common.words"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.edit.common.words.jsp"/>
+	</definition>
+	<definition name="to.common.words.detail" extends="sysparams.layout">
+		<put-attribute name="title" value="common.words.detail"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/sysparams/to.common.words.detail.jsp"/>
+	</definition>
+	
+</tiles-definitions>

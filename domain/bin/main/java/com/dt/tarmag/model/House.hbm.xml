@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.House" table="DT_HOUSE">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="floorNum" type="java.lang.Integer">
+			<column name="FLOOR_NUM" />
+		</property>
+		<property name="roomNum" type="java.lang.String">
+			<column name="ROOM_NUM" />
+		</property>
+		<property name="code" type="java.lang.String">
+			<column name="CODE" />
+		</property>
+		<property name="dyCode" type="java.lang.String">
+			<column name="DY_CODE" />
+		</property>
+		<property name="storyId" type="java.lang.Long">
+			<column name="STORY_ID" />
+		</property>
+		<property name="unitId" type="java.lang.Long">
+			<column name="UNIT_ID" />
+		</property>
+		<property name="proNo" type="java.lang.String">
+			<column name="PRO_NO" />
+		</property>
+		<property name="area" type="java.lang.Double">
+			<column name="AREA" />
+		</property>
+		<property name="amount" type="java.lang.Double">
+			<column name="AMOUNT" />
+		</property>
+		<property name="status" type="java.lang.Byte">
+			<column name="STATUS" />
+		</property>
+		<property name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+		<property name="delegateDelivery" type="java.lang.Byte">
+			<column name="DELEGATE_DELIVERY" />
+		</property>
+
+		<property name="createUserId" type="java.lang.Long">
+			<column name="CREATE_USER_ID" />
+		</property>
+		<property name="createDateTime" type="java.util.Date">
+			<column name="CREATE_DATE_TIME" />
+		</property>
+		<property name="updateUserId" type="java.lang.Long">
+			<column name="UPDATE_USER_ID" />
+		</property>
+		<property name="updateDateTime" type="java.util.Date">
+			<column name="UPDATE_DATE_TIME" />
+		</property>
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

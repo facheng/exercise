@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.Event" table="DT_EVENT">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="title" type="java.lang.String">
+			<column name="TITLE" />
+		</property>
+		<property name="content" type="java.lang.String">
+			<column name="CONTENT" />
+		</property>
+		<property name="eventTime" type="java.util.Date">
+			<column name="EVENT_TIME" />
+		</property>
+		<property name="position" type="java.lang.String">
+			<column name="POSITION" />
+		</property>
+		<property name="expectedCount" type="java.lang.Integer">
+			<column name="EXPECTED_COUNT" />
+		</property>
+		<property name="consumption" type="java.lang.Integer">
+			<column name="CONSUMPTION" />
+		</property>
+		<property name="gatherPosition" type="java.lang.String">
+			<column name="GATHER_POSITION" />
+		</property>
+		<property name="gatherTime" type="java.util.Date">
+			<column name="GATHER_TIME" />
+		</property>
+
+		<property name="createUserId" type="java.lang.Long">
+			<column name="CREATE_USER_ID" />
+		</property>
+		<property name="createDateTime" type="java.util.Date">
+			<column name="CREATE_DATE_TIME" />
+		</property>
+		<property name="updateUserId" type="java.lang.Long">
+			<column name="UPDATE_USER_ID" />
+		</property>
+		<property name="updateDateTime" type="java.util.Date">
+			<column name="UPDATE_DATE_TIME" />
+		</property>
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

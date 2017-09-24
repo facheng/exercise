@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="to.login" extends="blank.layout">
+		<put-attribute name="title" value="to.login" />
+		<put-attribute name="ext-width" value="contains login_contains" />
+		<put-attribute name="head.css" value="/WEB-INF/jsp/login/css.jsp"/>
+		<put-attribute name="head.js" value="/WEB-INF/jsp/login/js.jsp"/>
+		<put-attribute name="column-1" value="/WEB-INF/jsp/login/login.jsp" />
+	</definition>
+	
+
+	<definition name="to.select.unit.and.role" extends="blank.layout">
+		<put-attribute name="title" value="to.select.unit.and.role" />
+		<put-attribute name="ext-width" value="contains login_contains" />
+		<put-attribute name="head.css" value="/WEB-INF/jsp/login/css.jsp"/>
+		<put-attribute name="head.js" value="/WEB-INF/jsp/login/js.jsp"/>
+		<put-attribute name="column-1" value="/WEB-INF/jsp/login/to.select.unit.and.role.jsp" />
+	</definition>
+	
+</tiles-definitions>

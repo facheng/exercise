@@ -1,0 +1,312 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>房屋管理</title>
+<link href="http://121.40.148.98:8008/tarmag/styles/main.css" rel="stylesheet" type="text/css">
+<script src="http://121.40.148.98:8008/tarmag/js/jquery.min.js"></script>
+<script src="http://121.40.148.98:8008/tarmag/js/doubletuan.js"></script>
+</head>
+<body>
+<div class="header">
+	<!-- 顶部欢迎开始 -->
+	<div class="login-statu">
+	    	您好，
+    	<select name="unitId" id="unitSelect">
+			 	<option value="14" 
+			 		selected=true
+			 	>中科大</option>
+    	</select>物业经理！<a href="http://121.40.148.98:8008/tarmag/user/loginOut" title="安全退出">安全退出</a>
+>
+		<!--<a href="http://121.40.148.98:8008/tarmag/user/web/register" title="免费注册">免费注册</a>-->
+    </div>
+	<!-- 顶部欢迎结束 -->
+	<!-- 导航开始 -->
+	<div class="nav-box clearfix">		
+		<div class="logo">
+			<a href="http://121.40.148.98:8008/tarmag/houseInfo/houseInfoByUnitId" title="物业管理平台">物业管理平台</a>
+		</div>
+			<nav>
+			<ul class="nav">
+				 		<li class="nav-item">
+				 				<a bs="head" style="text-decoration:none" class="nav-item-link" title="物业管理" href="http://121.40.148.98:8008/tarmag/houseInfo/findHouseCountByStatus?mid=1">物业管理</a>
+							
+						</li>
+				 		<li class="nav-item">
+				 				<a bs="head" style="text-decoration:none" class="nav-item-link" title="公告管理" href="http://121.40.148.98:8008/tarmag/noticeinfo/noticeinfoByUnitId?mid=6">公告管理</a>
+							
+						</li>
+				 		<li class="nav-item">
+				 				<a bs="head" style="text-decoration:none" class="nav-item-link" title="出入统计" href="http://121.40.148.98:8008/tarmag/tripInfo/count/byLevelOrQr?mid=9">出入统计</a>
+							
+						</li>
+				 		<li class="nav-item">
+				 				<a bs="head" style="text-decoration:none" class="nav-item-link" title="报修管理" href="http://121.40.148.98:8008/tarmag/repairInfo/findRepairs?type=N&mid=14">报修管理</a>
+							
+						</li>
+				 		<li class="nav-item">
+				 				<a bs="head" style="text-decoration:none" class="nav-item-link" title="账务统计" href="http://121.40.148.98:8008/tarmag/financial/paymentList?mid=19">账务统计</a>
+							
+						</li>
+				 		<li class="nav-item">
+				 				<a bs="head" style="text-decoration:none" class="nav-item-link" title="系统参数设置" href="http://121.40.148.98:8008/tarmag/sysParameter/SystemParameterSetting?mid=23">系统参数设置</a>
+							
+						</li>
+			</ul>
+		</nav>
+	</div>
+	<!-- 导航结束 -->
+</div>
+<script type="text/javascript">
+
+	$("#userNameOut").mouseover(function(){
+		$("#userSeZhi").show();
+	});
+	
+	$("#userNameOut").mouseout(function(){
+		$("#userSeZhi").hide();
+	});
+	
+	$(function(){
+		$("#unitSelect").change(function(e){
+			var unitId = $(this).val();
+			var url = "http://121.40.148.98:8008/tarmag/user/changeUnit?unitId="+unitId;
+			if(unitId==null||unitId==""){
+				url = "http://121.40.148.98:8008/tarmag/user/login";
+			}
+			top.window.location.href = url;
+		});
+	});
+</script>		<div class="container leftnavbg clearfix">
+	<div class="leftNav">
+				<h1><a href="http://121.40.148.98:8008/tarmag/houseInfo/findHouseCountByStatus">物业管理</a></h1>
+			  <div class="leftNav-sub">
+			<a style="text-decoration: none;" title="房屋统计" href="http://121.40.148.98:8008/tarmag/houseInfo/findHouseCountByStatus"  >房屋统计</a>
+			<a style="text-decoration: none;" title="房屋管理" href="http://121.40.148.98:8008/tarmag/houseInfo/findHouseInfoManageById"  >房屋管理</a>
+			<a style="text-decoration: none;" title="车位管理" href="http://121.40.148.98:8008/tarmag/carportInfo/listCarportInfos"  >车位管理</a>
+			<a style="text-decoration: none;" title="车辆出入记录" href="http://121.40.148.98:8008/tarmag/tripInfo/listTripInfos?tripType=C"  >车辆出入记录</a>
+			<a style="text-decoration: none;" title="缴费管理" href="http://121.40.148.98:8008/tarmag/propertyBill/listPropertyBill"  >缴费管理</a>
+			<a style="text-decoration: none;" title="需要关注业主" href="http://121.40.148.98:8008/tarmag/houseHolder/listHoldersByType" class="improper_element" >需要关注业主</a>
+			</div>
+	</div>
+	<div class="rightCon">
+		<div class="rightNav">
+			<h2 class="titIcon wyIcon">房屋管理</h2>
+			<div class="rightNav-sub">
+				<a href="http://121.40.148.98:8008/tarmag/houseInfo/findHouseInfoManageById" title="返回" class="c">返回</a>
+				<!--<a href="http://121.40.148.98:8008/tarmag/houseInfo/updateHouseInfoDetail?houseId=2015042400014025" title="修改房屋信息" class="c">修改房屋信息</a>-->
+				<a href="javascript:updateHouse();" title="修改房屋信息">修改房屋信息</a>
+			</div>
+		</div>
+		<div class="detail-box">
+			<div class="owner-tab">
+				<h3 class="h3tit">房屋信息</h3>
+				<table width="100%" class="inv-table">
+					<tbody>
+						<tr>
+							<th><label>房屋信息</label></th>
+							<td>南汇一期-01-1013</td>
+						</tr>
+						<tr>
+							<th><label>产证号码</label></th>
+							<td>1.00</td>
+						</tr>					
+						<tr>
+							<th><label>房屋面积</label></th>
+							<td>283.94平方米</td>
+						</tr>
+						<tr>
+							<th><label>房屋X坐标</label></th>
+							<td>121.54</td>
+						</tr>
+						<tr>
+							<th><label>房屋Y坐标</label></th>
+							<td>31.13</td>
+						</tr>
+						<tr>
+							<th><label>房屋状态</label></th>
+							<td class="status">
+								自住
+							</td>
+						</tr>											
+					</tbody>
+				</table>
+                <h3 class="h3tit mt20">业主信息</h3>
+				<div class="fcInfoBox">
+					<div class="fcInfoCon">
+						<table width="100%" class="inv-table"  >
+							<tbody>					
+								<tr>
+									<th><label>业主姓名</label></th>
+									<td>李军/赵益民/赵舒帆</td>
+								</tr>
+								<tr>
+									<th><label>身份证号</label></th>
+									<td></td>
+								</tr>					
+								<tr>
+									<th><label>手机号码</label></th>						
+									<td>18616828558</td>					
+								</tr>								
+							</tbody>					
+						</table>
+						<div class="fcInfoBtn"><a href="http://121.40.148.98:8008/tarmag/tripInfo/listTripInfos?tripType=P&houseId=2015042400014025" title="查看租客进出入记录"  >查看李军/赵益民/赵舒帆进出入记录</a></div>
+					</div>
+				<div class="clear"></div>
+				</div>
+			    <h3 class="h3tit mt20">租客信息</h3>
+				 <div class="fcInfoBox">
+					<div class="fcInfoCon">
+						<table width="100%" class="inv-table"  >
+							<tbody>					
+								<tr>
+									没有租客信息
+								</tr>
+							</tbody>					
+						</table>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>			
+		</div>
+	</div>
+</div>
+<!-- 底部版权开始 -->
+<div class="footer">	
+	Copyright @2014 doubletuan.com.All Right Reserved.&nbsp;&nbsp;技术支持：上海团团科技信息有限公司 联系电话：<b>+86 (21) 6160-0112</b>
+</div>	<!-- 底部版权结束 -->
+<div class="overlay" style="display:none"></div>
+<div class="inv-form" style="display:none">
+	<form name="" method="">
+		<table width="100%" class="inv-table">
+			<tbody>
+				<tr>
+					<th><label>业主姓名</label></th>
+					<td>
+						<input type="text" class="guest-num" value="请输入户主姓名">
+						<div class="tip-normal error"><span class="errorIcon"></span>请输入户主姓名</div>
+					</td>
+				</tr>
+				<tr>
+					<th><label>身份证号</label></th>
+					<td>
+						<input type="text" class="guest-num" value="请输入户主身份证号">							
+					</td>
+				</tr>
+				<tr>
+					<th><label>手机号码</label></th>						
+					<td>
+						<input type="text" class="guest-num" value="请输入户主手机号">							
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<a href="#" title="确定" class="btn bntbgDarkG">确 定</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="close-btn">
+			<a title="关闭" href="#">关闭</a>
+		</div>
+	</form>
+</div>
+
+<!-- 房屋信息修改-->
+<div id="houseMag" class="overlay" style="display:none"></div>
+<div id="houseMagBox" class="inv-form" style="display:none">
+	<form  action="http://121.40.148.98:8008/tarmag/houseInfo/updateHouseMag" method="post" id="houseMagForm">
+		<table width="100%" class="inv-table">
+		<input type="hidden" name="houseId" value="2015042400014025">
+			<tbody>
+				<tr>
+					<th><label>房屋信息</label></th>
+					<td>
+						<input type="text" class="guest-num" name="position" value="南汇一期-01-1013">
+						<div class="tip-normal error" style="display:none"><span class="errorIcon"></span>请输入户主姓名</div>
+					</td>
+				</tr>
+				<tr>
+					<th><label>产证号码</label></th>
+					<td>
+						<input type="text" class="guest-num" name="proNo" value="1.00">							
+					</td>
+				</tr>
+				<tr>
+					<th><label>房屋面积</label></th>						
+					<td>
+						<input type="text" class="guest-num" name="area" value="283.94"><span>平方米</span>							
+					</td>
+				</tr>
+				<tr>
+					<th><label>地图X坐标</label></th>						
+					<td>
+						<input type="text" class="guest-num" name="coordinateX" value="121.54">	
+					</td>
+				</tr>
+				<tr>
+					<th><label>地图Y坐标</label></th>						
+					<td>
+						<input type="text" class="guest-num" name="coordinateY" value="31.13">
+					</td>
+				</tr>
+				<tr>
+					<th><label>房屋状态</label></th>						
+					<td>
+						<select class="chargeCompany" id="houseStatus" name="status">
+						<option value="S">待售</option>							
+						<option value="D">待租</option>			
+						<option value="Z">自住</option>			
+						<option value="C">出租</option>			
+					</select>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+						<a href="javascript:saveHouseMag();" title="确定" class="btn bntbgDarkG">确 定</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="close-btn">
+			<a title="关闭" href="javascript:updateHouseClose();">关闭</a>
+		</div>
+	</form>
+</div>
+<script>
+	$(document).ready(function(){
+		$("a[title='物业管理']").attr("class","nav-item-link c");
+		$("a[title='房屋管理']").attr("class","c");
+	    //房屋状态回显
+		$('#houseStatus option').each(function(){
+		   $this = $(this).val();
+	       if($this =="Z"){
+	           $(this).attr('selected',true);
+	       }
+	    });	     
+	});
+	
+	
+	
+	
+	function updateHouse()
+	{
+		$("#houseMag").show();
+		$("#houseMagBox").show();
+	}
+	
+	function updateHouseClose()
+	{
+		$("#houseMag").hide();
+		$("#houseMagBox").hide();
+	}
+	
+	function saveHouseMag()
+	{
+		$("#houseMagForm").submit();
+	}
+	</script>
+</body>
+</html>

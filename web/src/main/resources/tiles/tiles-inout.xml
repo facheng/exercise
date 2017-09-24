@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="inout.layout" extends="main.layout">
+		<put-attribute name="title" value="inout.statistics"/>
+		<put-attribute name="custom.css" value="/WEB-INF/jsp/inout/css.jsp"/>
+		<put-attribute name="custom.js" value="/WEB-INF/jsp/inout/js.jsp"/>
+		<put-attribute name="column-1" value="/WEB-INF/jsp/common/left.menu.jsp"/>
+	</definition>
+	
+
+	<definition name="to.show.inout.vehicle.list" extends="inout.layout">
+		<put-attribute name="title" value="inout.vehicle.rec"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/inout/to.show.inout.vehicle.list.jsp"/>
+	</definition>
+	
+	<definition name="to.show.inout.passerby.list" extends="inout.layout">
+		<put-attribute name="title" value="inout.passerby.rec"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/inout/to.show.inout.passerby.list.jsp"/>
+	</definition>
+	
+	<definition name="to.show.inout.vehicle.exception.list" extends="inout.layout">
+		<put-attribute name="title" value="inout.vehicle.exception.rec"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/inout/to.show.inout.vehicle.exception.list.jsp"/>
+	</definition>
+	
+	<definition name="to.show.inout.passerby.exception.list" extends="inout.layout">
+		<put-attribute name="title" value="inout.passerby.exception.rec"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/inout/to.show.inout.passerby.exception.list.jsp"/>
+	</definition>
+	
+	<!-- 行人出入记录 -->
+	<definition name="to.show.inout.passerby.statistics" extends="inout.layout">
+		<put-attribute name="title" value="inout.passerby.statistics"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/inout/to.show.inout.passerby.statistics.jsp"/>
+	</definition>
+	
+</tiles-definitions>

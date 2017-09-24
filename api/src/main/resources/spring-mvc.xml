@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 	
+	   http://www.springframework.org/schema/beans/spring-beans.xsd	
+	   http://www.springframework.org/schema/aop 	
+	   http://www.springframework.org/schema/aop/spring-aop.xsd	
+	   http://www.springframework.org/schema/tx	
+	   http://www.springframework.org/schema/tx/spring-tx.xsd	
+	   http://www.springframework.org/schema/context	
+	   http://www.springframework.org/schema/context/spring-context.xsd	
+	   http://www.springframework.org/schema/mvc	
+	   http://www.springframework.org/schema/mvc/spring-mvc.xsd"
+	default-autowire="byName">
+
+
+	<mvc:annotation-driven>
+		<mvc:message-converters register-defaults="true">
+			<bean id="stringHttpMessageConverter" class="org.springframework.http.converter.StringHttpMessageConverter">
+				<constructor-arg index="0">
+					<bean class="java.nio.charset.Charset" factory-method="forName">
+						<constructor-arg value="UTF-8" />
+					</bean>
+				</constructor-arg>
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/html;charset=UTF-8</value>
+						<value>text/plain;charset=UTF-8</value>
+						<value>application/json;charset=UTF-8</value>
+						<value>application/xml;charset=UTF-8</value>
+						<value>application/x-www-form-urlencoded;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+
+
+	<context:component-scan base-package="com.dt.tarmag.api" />
+	<mvc:resources mapping="/static/**" location="/static/" />
+
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="2097152"/>
+	</bean>
+
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<property name="viewClass">
+			<value>org.springframework.web.servlet.view.tiles2.TilesView</value>
+		</property>
+	</bean>
+	<bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles2.TilesConfigurer">
+		<property name="definitions">
+			<list>
+				<value>classpath:tiles/*.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />
+
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>bundles.message</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean class="com.dt.framework.util.TextUtil">
+		<property name="messageSource" ref="messageSource" />
+	</bean>
+
+	<!-- <mvc:interceptors>
+		<mvc:interceptor>
+			i家园
+			<mvc:mapping path="/ihome/**" />
+			保安
+			<mvc:mapping path="/securitystaff/**" />
+			保修
+			<mvc:mapping path="/guarantee/**" />
+			 i家园获取验证码
+			<mvc:exclude-mapping path="/ihome/pincode"/>
+			 i家园登录
+			<mvc:exclude-mapping path="/ihome/login"/>
+			 i家园头像上传
+			<mvc:exclude-mapping path="/ihome/headimg"/>
+			i家园游客获取菜单
+			<mvc:exclude-mapping path="/ihome/appmenu/**"/>
+			保安登录
+			<mvc:exclude-mapping path="/securitystaff/login"/>
+			保修登录
+			<mvc:exclude-mapping path="/guarantee/login"/>
+			<bean class="com.dt.tarmag.interceptor.LoginCheckInterceptor"></bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/ihome/**" />
+			<mvc:exclude-mapping path="/ihome/login"/>
+			<bean class="com.dt.tarmag.interceptor.ApiRequestRecInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>	 -->
+	
+</beans>

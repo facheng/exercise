@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.CarPort" table="DT_CAR_PORT">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="garageId" type="java.lang.Long">
+			<column name="GARAGE_ID" />
+		</property>
+		<property name="portNo" type="java.lang.String">
+			<column name="PORT_NO" />
+		</property>
+		<property name="bindResidentId" type="java.lang.Long">
+			<column name="BIND_RESIDENT_ID" />
+		</property>
+		<property name="bindType" type="java.lang.Byte">
+			<column name="BIND_TYPE" />
+		</property>
+		<property name="bindTime" type="java.util.Date">
+			<column name="BIND_TIME" />
+		</property>
+		<property name="bindRentPeriod" type="java.lang.Byte">
+			<column name="BIND_RENT_PERIOD" />
+		</property>
+
+		<property name="createUserId" type="java.lang.Long">
+			<column name="CREATE_USER_ID" />
+		</property>
+		<property name="createDateTime" type="java.util.Date">
+			<column name="CREATE_DATE_TIME" />
+		</property>
+		<property name="updateUserId" type="java.lang.Long">
+			<column name="UPDATE_USER_ID" />
+		</property>
+		<property name="updateDateTime" type="java.util.Date">
+			<column name="UPDATE_DATE_TIME" />
+		</property>
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

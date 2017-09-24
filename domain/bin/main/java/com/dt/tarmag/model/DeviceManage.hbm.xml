@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.DeviceManage" table="DT_DEVICE_MANAGE">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="appType" type="java.lang.String">
+			<column name="APP_TYPE" />
+		</property>
+		<property name="nToken" type="java.lang.String">
+			<column name="N_TOKEN" />
+		</property>
+		<property name="userId" type="java.lang.Long">
+			<column name="USER_ID" />
+		</property>
+		<property name="deviceType" type="java.lang.String">
+			<column name="DEVICE_TYPE" />
+		</property>
+		<property name="deviceModel" type="java.lang.String">
+			<column name="DEVICE_MODEL" />
+		</property>
+
+		<property name="createUserId" type="java.lang.Long">
+			<column name="CREATE_USER_ID" />
+		</property>
+		<property name="createDateTime" type="java.util.Date">
+			<column name="CREATE_DATE_TIME" />
+		</property>
+		<property name="updateUserId" type="java.lang.Long">
+			<column name="UPDATE_USER_ID" />
+		</property>
+		<property name="updateDateTime" type="java.util.Date">
+			<column name="UPDATE_DATE_TIME" />
+		</property>
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

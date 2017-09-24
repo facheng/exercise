@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.Invitation" table="DT_INVITATION">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="inviterId" type="java.lang.Long">
+			<column name="INVITER_ID" />
+		</property>
+		<property name="inviteeId" type="java.lang.Long">
+			<column name="INVITEE_ID" />
+		</property>
+		<property name="houseId" type="java.lang.Long">
+			<column name="HOUSE_ID" />
+		</property>
+		<property name="visitTime" type="java.util.Date">
+			<column name="VISIT_TIME" />
+		</property>
+		<property name="deadlineTime" type="java.util.Date">
+			<column name="DEADLINE_TIME" />
+		</property>
+		<property name="message" type="java.lang.String">
+			<column name="MESSAGE" />
+		</property>
+		<property name="qrCode" type="java.lang.String">
+			<column name="QR_CODE" />
+		</property>
+		<property name="createTime" type="java.util.Date">
+			<column name="CREATE_TIME" />
+		</property>
+
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

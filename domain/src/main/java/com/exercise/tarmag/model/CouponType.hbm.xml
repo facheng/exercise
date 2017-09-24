@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.CouponType" table="DT_COUPON_TYPE">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="name" type="java.lang.String">
+			<column name="NAME" />
+		</property>
+		<property name="region" type="java.lang.String">
+			<column name="REGION" />
+		</property>
+		<property name="sponsor" type="java.lang.String">
+			<column name="SPONSOR" />
+		</property>
+		<property name="deadline" type="java.util.Date">
+			<column name="DEADLINE" />
+		</property>
+		<property name="rule" type="java.lang.String">
+			<column name="RULE" />
+		</property>
+		<property name="queryMethod" type="java.lang.String">
+			<column name="QUERY_METHOD" />
+		</property>
+		<property name="servicePhone" type="java.lang.String">
+			<column name="SERVICE_PHONE" />
+		</property>
+		<property name="code" type="java.lang.Byte">
+			<column name="CODE" />
+		</property>
+		<property name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+		<property name="url" type="java.lang.String">
+			<column name="URL" />
+		</property>
+		<property name="onShelf" type="java.lang.Byte">
+			<column name="ON_SHELF" />
+		</property>
+		<property name="ctype" type="java.lang.Byte">
+			<column name="CTYPE" />
+		</property>
+		<property name="price" type="java.lang.Double">
+			<column name="PRICE" />
+		</property>
+
+		<property name="createUserId" type="java.lang.Long">
+			<column name="CREATE_USER_ID" />
+		</property>
+		<property name="createDateTime" type="java.util.Date">
+			<column name="CREATE_DATE_TIME" />
+		</property>
+		<property name="updateUserId" type="java.lang.Long">
+			<column name="UPDATE_USER_ID" />
+		</property>
+		<property name="updateDateTime" type="java.util.Date">
+			<column name="UPDATE_DATE_TIME" />
+		</property>
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

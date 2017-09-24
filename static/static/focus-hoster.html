@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+	<title></title>
+    <link rel="stylesheet"  href="css/base.css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script src="js/base.js"></script>
+</head>
+<body>
+<div class="contains white_bg_con" style=" min-width:860px;">
+    <div class="">
+        <div class="loginHeader">
+            <!-- 顶部欢迎开始 -->
+            <div class="login-statu">
+            	<span>您好，</span>
+            	<select>
+			 		<option>中科大2</option>
+                    <option>中科大3</option>
+    			</select>
+            	<span>物业经理！</span>
+                <a href="" title="安全退出">安全退出 &gt;</a>
+                <!--<a href="" title="免费注册">免费注册</a>-->
+            </div>
+            
+            <!-- 顶部欢迎结束 -->
+            <div class="top-nav clear">
+             	<div class="logo">
+                    <a href="" title="物业管理平台">物业管理平台</a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item">
+                    	<a class="nav-item-link cur" title="物业管理" href="">物业管理</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="公告管理" href="">公告管理</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="出入统计" href="">出入统计</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="报修管理" href="">报修管理</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="账务统计" href="">账务统计</a>
+                    </li>
+                    <li class="nav-item">
+                    	<a class="nav-item-link" title="系统参数设置" href="">系统参数设置</a>
+                    </li>
+				</ul>
+             </div>
+             
+        </div>
+        <div class="main">
+             
+             <div class="leftnavbg clear">
+             
+             	<div class="leftNav">
+                    <h1><a href="">物业管理</a></h1>
+                    <div class="leftNav-sub">
+                        <a title="房屋统计" href="house-info.html">房屋统计</a>
+                        <a title="房屋管理" href="house-manage.html">房屋管理</a>
+                        <a title="车位管理" href="">车位管理</a>
+                        <a title="车辆出入记录" href="">车辆出入记录</a>
+                        <a title="缴费管理" href="">缴费管理</a>
+                        <a title="需要关注业主" href="" class="cur">需要关注业主</a>
+                    </div>
+                </div>
+                
+                <div class="rightCon">
+                	<div class="rightNav">
+                        <h2 class="titIcon wyIcon">需要关注业主</h2>
+                        <div class="addbtn">
+                            <a class="btn btnbgViolet" title="导出报表" href="javascript:void(0);">导出需要关注业主报表</a>
+                            <a class="btn areaNumber-info import-tmpl-btn" title="导出黑名单" href="javascript:void(0);">导入需要关注业主</a>
+                            <a class="btn bntbgBrown modify-focus-btn" title="添加业主" href="javascript:void(0);">添加业主</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cont_box_wrap">
+                    	
+                        <div class="category  no-border-top">
+                            <div class="cate-link cateLinkIconBox">
+                                <span>业主状态类型：</span>
+                                <a class="cur" title="全部" href="javascript:void(0);" id="allHoldType">全部</a>
+                                <a title="易怒" href="javascript:void(0);" class="cateLinkIcon angry">易怒</a>
+                                <a title="体弱" href="javascript:void(0);" class="cateLinkIcon weak">体弱</a>				
+                                <a title="迟缴费" href="javascript:void(0);" class="cateLinkIcon overdue">迟缴费</a>				
+                            </div>
+                        </div>
+                        
+                        <div class="category no-border-top">
+                            <ul class="searchfm clear">
+                                 <li><span class="zw">门牌号码：</span><input type="text" class="textinput" placeholder="请输入门牌号码"></li>
+                                 <li><span>&nbsp;</span><a href="javascript:void(0);" title="查询" class="btn bntbgGreen">查询</a></li>
+                            </ul>
+                        </div>
+                        
+                        <table width="100%" class="list-table mt10 focus-host-tbl">
+                            <colgroup> 
+                                <col width="10%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="20%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th> </th>
+                                    <th>门牌号</th>
+                                    <th>业主姓名</th>
+                                    <th>手机号码</th>
+                                    <th>备注</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" value=""></td>
+                                    <td>1-1005</td>
+                                    <td>孙永欣/李海红/孙昰</td>
+                                    <td>13311943759</td>	
+                                    <td></td>
+                                    <td class="ownerBox">
+                                            <span class="blacklist weak">
+                                            <div class="tooltip">
+                                              <div class="tooltip-arrow"></div>
+                                              <div class="tooltip-inner">
+                                                    <span class="weakBig"></span>迟缴费
+                                              </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td class="action">
+                                        <a class="btn_smalls btn-primary delete-focus-hoster" href="javascript:void(0);">移出</a>
+                                        <a class="btn_smalls btn-primary modify-focus-btn" href="javascript:void(0);">修改</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" value=""></td>
+                                    <td>1-1011</td>
+                                    <td>钱裕清/何玉萍</td>
+                                    <td>15021114351</td>	
+                                    <td>要去医院</td>
+                                    <td class="ownerBox">
+                                            <span class="blacklist overdue">
+                                            <div class="tooltip">
+                                              <div class="tooltip-arrow"></div>
+                                              <div class="tooltip-inner">
+                                                    <span class="overdueBig"></span>体弱
+                                              </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td class="action">
+                                        <a class="btn_smalls btn-primary delete-focus-hoster" href="javascript:void(0);">移出</a>
+                                        <a class="btn_smalls btn-primary modify-focus-btn" href="javascript:void(0);">修改</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" value=""></td>
+                                    <td>1-1014</td>
+                                    <td>翁大卫/孙阿姨</td>
+                                    <td>13585980739</td>	
+                                    <td></td>
+                                    <td class="ownerBox">
+                                            <span class="blacklist angry">
+                                            <div class="tooltip">
+                                              <div class="tooltip-arrow"></div>
+                                              <div class="tooltip-inner">
+                                                    <span class="angryBig"></span>易怒
+                                              </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td class="action">
+                                        <a class="btn_smalls btn-primary delete-focus-hoster" href="javascript:void(0);">移出</a>
+                                        <a class="btn_smalls btn-primary modify-focus-btn" href="javascript:void(0);">修改</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" value=""></td>
+                                    <td>2-1006</td>
+                                    <td>汪璐</td>
+                                    <td>13816073795</td>	
+                                    <td></td>
+                                    <td class="ownerBox">
+                                            <span class="blacklist overdue">
+                                            <div class="tooltip">
+                                              <div class="tooltip-arrow"></div>
+                                              <div class="tooltip-inner">
+                                                    <span class="overdueBig"></span>体弱
+                                              </div>
+                                            </div>
+                                        </span>
+                                    </td>
+                                    <td class="action">
+                                        <a class="btn_smalls btn-primary delete-focus-hoster" href="javascript:void(0);">移出</a>
+                                        <a class="btn_smalls btn-primary modify-focus-btn" href="javascript:void(0);">修改</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="list-btline">
+                            <div class="selectChoose">
+                                <input type="button" value="全选" class="btn_smalls areaNumber-info all-choose">
+                                <input type="button" value="全不选" class="btn_smalls areaNumber-info none-choose">
+                                <input type="button" value="反选" class="btn_smalls areaNumber-info reverse-choose">
+                            </div>
+                            <div class="moneyTcf">
+                            <a class="btn_smalls btn-primary" href="javascript:void(0);" title="批量移出">批量移出</a>
+                             </div>
+                            <div class="clear"></div>
+                        </div>
+                        
+                        <!--pagination-->
+                        <div class="clear mt10">
+                            <ul class="pagination">
+                            	<li><a href="javascript:void(0);">&lt;&lt;首页</a></li>
+                                <li><a href="javascript:void(0);" class="cur">1</a></li>
+                                <li><a href="javascript:void(0);">尾页&gt;&gt;</a></li>
+                             </ul>
+                        </div>
+                        <!--pagination-->
+                        
+                    </div>
+                    
+                </div>
+                
+             </div>   
+        </div>
+     	
+        <div class="footer">Copyright @2014 doubletuan.com.All Right Reserved.&nbsp;&nbsp;技术支持：上海团团科技信息有限公司 联系电话：
+        	<b>+86 (21) 6160-0112</b>
+        </div>
+     
+    </div>
+</div>
+
+<!--修改-->
+<div class="dialog dialog-modify-focus-hoster">
+    <div class="dialog-container inv-form">
+    	<table width="100%" class="inv-table">
+			<tbody>
+				<tr>
+					<th><label>业主门牌号</label></th>
+					<td class="user_add">
+						<select class="chargeCompany select-colum2" >
+								<option value="">楼栋号</option>
+								<option value="1001">一期-0</option>
+								<option value="1002">二期-0</option>
+								<option value="1003">三期-0</option>
+								<option value="1004">四期-0</option>
+								<option value="1005">五期-0</option>
+						</select>
+						
+						<select class="chargeCompany select-colum2" >
+                        	<option value="">门牌号</option>
+                            <option value="2015042400014013">1-1001</option>
+                            <option value="2015042400014014">1-1002</option>
+                            <option value="2015042400014015">1-1003</option>
+                            <option value="2015042400014016">1-1004</option>
+                            <option value="2015042400014017">1-1005</option>
+                        </select>
+						<span>室</span>
+						<div class="tip-normal error"><span class="errorIcon"></span>请输入业主姓名</div>
+					</td>
+				</tr>
+				<tr>
+					
+					<th><label>选择业主</label></th>
+					<td>
+                    	<div class="ownershost-sel-con">
+                            <a href="javascript:void(0);" class="ownersBlacklistAdd">
+                                <p>孙永欣/李海红/孙昰(业主)</p><label>13311943759</label><span class=""></span>
+                            </a>
+                            <a href="javascript:void(0);" class="ownersBlacklistAdd">
+                                <p>孙永欣/李海红/孙昰(业主)</p><label>13311943759</label><span class=""></span>
+                            </a>
+                            <a href="javascript:void(0);" class="ownersBlacklistAdd">
+                                <p>孙永欣/李海红/孙昰(业主)</p><label>13311943759</label><span class=""></span>
+                            </a>
+                            <a href="javascript:void(0);" class="ownersBlacklistAdd">
+                                <p>孙永欣/李海红/孙昰(业主)</p><label>13311943759</label><span class=""></span>
+                            </a>
+                            <a href="javascript:void(0);" class="ownersBlacklistAdd">
+                                <p>孙永欣/李海红/孙昰(业主)</p><label>13311943759</label><span class=""></span>
+                            </a>
+                            <a href="javascript:void(0);" class="ownersBlacklistAdd">
+                                <p>孙永欣/李海红/孙昰(业主)</p><label>13311943759</label><span class=""></span>
+                            </a>
+                            <a href="javascript:void(0);" class="ownersBlacklistAdd">
+                                <p>孙永欣/李海红/孙昰(业主)</p><label>13311943759</label><span class=""></span>
+                            </a>
+                            <a href="javascript:void(0);" class="ownersBlacklistAdd">
+                                <p>孙永欣/李海红/孙昰(业主)</p><label>13311943759</label><span class=""></span>
+                            </a>
+                            <a href="javascript:void(0);" class="ownersBlacklistAdd">
+                                <p>孙永欣/李海红/孙昰(业主)</p><label>13311943759</label><span class=""></span>
+                            </a>
+                        </div>
+                    </td>
+				</tr>
+				<tr>
+					<th><label>选择状态</label></th>				
+					<td class="hmdList">
+                    	<div class="clear">
+						<label class="hmdBox"><input type="radio" name="holdType" checked="checked"><span class="hmdBox-text">易&nbsp;怒</span><span class="blacklist angry"></span></label>
+						<label class="hmdBox"><input type="radio" name="holdType"><span class="hmdBox-text">体&nbsp;弱</span><span class="blacklist overdue"></span></label>
+						<label class="hmdBox"><input type="radio" name="holdType"><span class="hmdBox-text">迟缴费</span><span class="blacklist weak"></span></label>
+                        </div>
+						<div class="tip-normal error" ><span class="errorIcon"></span>业主不存在</div>								
+					</td>
+				</tr>
+				<tr>
+					<th><label>备注内容：</label></th>
+					<td>
+						<textarea name="remark" id="remark" class="form-control" rows=" " placeholder="请输入备注内容" style="height:100px; "></textarea>
+						<div class="tip-normal error" id="contentLength" style="display:none;"><span class="errorIcon"></span>请输入公告内容</div>
+					</td>
+				</tr>
+				<tr>
+					<th></th>
+					<td>
+                    	<div class="tip-normal error"><span class="errorIcon"></span>请选择业主</div>
+						<a href="javascript:void(0);" title="确定" class="btn bntbgGreen">确 定</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+    </div>
+    <a class="icon icon-close dialog-close"></a>
+</div>
+<!--修改-->
+
+<!--删除-->
+<div class="dialog dialog-delete-focus-hoster">
+    <div class="dialog-container ">
+    	<div class="text-con-dialog">
+        	<p class="dialog-text-center">确认移出：1-1005孙永欣/李海红/孙昰</p>
+        </div>
+        <div class="winBtnBox mt20">
+            <a href="#" title="确定" class="btn bntbgBrown delete-confirm-btn">确 定</a>
+            <a href="#" title="取消" class="btn bntbgGreen">取 消</a>	
+        </div>
+    </div>
+    <a class="icon icon-close dialog-close"></a>
+</div>
+<!--删除-->
+
+
+<!--导入-->
+<div class="dialog set-house-position">
+    <div class="dialog-container ">
+    	<div class="text-con-dialog importInfoBox">
+        	<p>
+				<span>温馨提示：</span><br>
+				请先下载批量导入文件并录入数据 
+            	<a href="">点击下载“黑名单资料批量导入模版”</a>。您导入的文件需为当前系统里最新模版，且字段名称和顺序须与模版相符合。<br>若需人工协助，请致电：+86（21）6160-0112。
+			</p>
+            <p>请选择要导入的Excel文件：</p>
+            <div class="filediv">
+                <div class="line">
+                    <span class="span">
+                        <input name="" type="text" class="inputstyle" disabled="disabled" value="hello">
+                    </span>
+                    <label for="uploadStory" class="file1">浏览...</label>
+                </div>
+			</div>
+        </div>
+        <div class="winBtnBox mt20">
+            <a href="#" title="导入" class="btn bntbgBrown import-confirm-btn">导 入</a>
+            <a href="#" title="取消" class="btn bntbgGreen">取 消</a>	
+        </div>
+    </div>
+    <a class="icon icon-close dialog-close"></a>
+</div>
+<!--导入-->
+
+<!--导入中-->
+<div class="dialog dialog-importing">
+    <div class="dialog-container ">
+    	<div class="importing-con-dialog">
+        	<p class="">您导入的文件需为当前系统里最新模版，且字段名称和顺序须与模版相符合。</p>
+            <p class="">您导入的文件需为当前系统里最新模版，且字段名称和顺序须与模版相符合。</p>
+            <p class="">您导入的文件需为当前系统里最新模版，且字段名称和顺序须与模版相符合。</p>
+            <p class="">您导入的文件需为当前系统里最新模版，且字段名称和顺序须与模版相符合。</p>
+        </div>
+        <div class="winBtnBox mt20">
+            <a href="#" title="确定" class="btn bntbgGreen">确 定</a>	
+        </div>
+    </div>
+    <a class="icon icon-close dialog-close"></a>
+</div>
+<!--导入中-->
+
+
+<div class="black-opacity"></div>
+
+</body>
+</html>

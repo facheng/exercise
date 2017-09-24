@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+		
+<tiles-definitions>
+	<definition name="json.layout" template="/WEB-INF/jsp/layout/json.jsp">
+	</definition>
+	
+	<definition name="main.layout" preparer="com.dt.framework.util.TilesPreparer" template="/WEB-INF/jsp/layout/main.jsp">
+		<put-attribute name="title" value="common.title"/>
+		<put-attribute name="head.css" value="/WEB-INF/jsp/common/css.jsp"/>
+		<put-attribute name="head.js" value="/WEB-INF/jsp/common/js.jsp"/>
+		<put-attribute name="header" value="/WEB-INF/jsp/common/header.jsp"/>
+		<put-attribute name="footer" value="/WEB-INF/jsp/common/footer.jsp"/>
+	</definition>
+</tiles-definitions>
+
+	

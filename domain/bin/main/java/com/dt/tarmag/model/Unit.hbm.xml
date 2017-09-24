@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.Unit" table="DT_UNIT">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="code" type="java.lang.String">
+			<column name="CODE" />
+		</property>
+		<property name="unitName" type="java.lang.String">
+			<column name="UNIT_NAME" />
+		</property>
+		<property name="lantitude" type="java.lang.Double">
+			<column name="LANTITUDE" />
+		</property>
+		<property name="longitude" type="java.lang.Double">
+			<column name="LONGITUDE" />
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="ADDRESS" />
+		</property>
+		<property name="branchId" type="java.lang.Long">
+			<column name="BRANCH_ID" />
+		</property>
+		<property name="companyId" type="java.lang.Long">
+			<column name="COMPANY_ID" />
+		</property>
+		<property name="remark" type="java.lang.String">
+			<column name="REMARK" />
+		</property>
+		<property name="districtId" type="java.lang.Long">
+			<column name="DISTRICT_ID" />
+		</property>
+		<property name="appBackgroundImg" type="java.lang.String">
+			<column name="APP_BACKGROUND_IMG" />
+		</property>
+		<property name="isAuto" type="java.lang.Byte">
+			<column name="IS_AUTO" />
+		</property>
+
+		<property name="createUserId" type="java.lang.Long">
+			<column name="CREATE_USER_ID" />
+		</property>
+		<property name="createDateTime" type="java.util.Date">
+			<column name="CREATE_DATE_TIME" />
+		</property>
+		<property name="updateUserId" type="java.lang.Long">
+			<column name="UPDATE_USER_ID" />
+		</property>
+		<property name="updateDateTime" type="java.util.Date">
+			<column name="UPDATE_DATE_TIME" />
+		</property>
+		<property name="deleted" type="java.lang.String">
+			<column name="DELETED" />
+		</property>
+	</class>
+</hibernate-mapping>

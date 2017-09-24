@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dt.tarmag.model.Province" table="DT_PROVINCE">
+		<cache usage="read-write" />
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="identity" />
+		</id>
+
+		<property name="provinceId" type="java.lang.Long">
+			<column name="PROVINCE_ID" />
+		</property>
+		<property name="provinceName" type="java.lang.String">
+			<column name="PROVINCE_NAME" />
+		</property>
+		<property name="locale" type="java.lang.String">
+			<column name="LOCALE" />
+		</property>
+	</class>
+</hibernate-mapping>

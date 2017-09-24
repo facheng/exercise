@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+		"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" 
+		"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	
+	<definition name="admin.layout" extends="main.layout">
+		<put-attribute name="ext-width" value="container leftnavbg clearfix" />
+		<put-attribute name="custom.css" value="/WEB-INF/jsp/admin/css.jsp"/>
+		<put-attribute name="custom.js" value="/WEB-INF/jsp/admin/js.jsp"/>
+		<put-attribute name="header" value="/WEB-INF/jsp/admin/admin.header.jsp"/>
+		<put-attribute name="column-1" value="/WEB-INF/jsp/admin/admin.left.menu.jsp"/>
+	</definition>
+	
+	<definition name="to.show.company.branch.list" extends="admin.layout">
+		<put-attribute name="title" value="company.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.company.branch.list.jsp"/>
+	</definition>
+	
+	<definition name="to.edit.company.branch" extends="admin.layout">
+		<put-attribute name="title" value="company.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.edit.company.branch.jsp"/>
+	</definition>
+	
+	
+	<definition name="to.show.user.list" extends="admin.layout">
+		<put-attribute name="title" value="user.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.user.list.jsp"/>
+	</definition>
+	<definition name="to.edit.user" extends="admin.layout">
+		<put-attribute name="title" value="user.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.edit.user.jsp"/>
+	</definition>
+	<definition name="to.show.user.detail" extends="admin.layout">
+		<put-attribute name="title" value="user.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.user.detail.jsp"/>
+	</definition>
+
+	<definition name="to.show.role.list" extends="admin.layout">
+		<put-attribute name="title" value="role.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.role.list.jsp"/>
+	</definition>
+	<definition name="to.edit.role" extends="admin.layout">
+		<put-attribute name="title" value="role.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.edit.role.jsp"/>
+	</definition>
+
+	<definition name="to.set.customer.unit.role" extends="admin.layout">
+		<put-attribute name="title" value="role.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.set.customer.unit.role.jsp"/>
+	</definition>
+
+	<definition name="to.set.role.menu" extends="admin.layout">
+		<put-attribute name="title" value="role.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.set.role.menu.jsp"/>
+	</definition>
+	
+	<definition name="to.unit.index" extends="admin.layout">
+		<put-attribute name="title" value="unit.title"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.unit.list.jsp"/>
+	</definition>
+	
+	<definition name="to.unit.edit" extends="admin.layout">
+		<put-attribute name="title" value="unit.title"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.edit.unit.jsp"/>
+	</definition>
+	
+	<definition name="to.unit.info" extends="admin.layout">
+		<put-attribute name="title" value="unit.title"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.unit.info.jsp"/>
+	</definition>
+	
+	<definition name="to.edit.partition" extends="admin.layout">
+		<put-attribute name="title" value="unit.title"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.edit.partition.jsp"/>
+	</definition>
+	
+	<definition name="to.show.partition.list" extends="admin.layout">
+		<put-attribute name="title" value="unit.title"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.partition.list.jsp"/>
+	</definition>
+	
+	<definition name="to.show.partition.info" extends="admin.layout">
+		<put-attribute name="title" value="unit.title"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.partition.info.jsp"/>
+	</definition>
+	
+	<definition name="to.show.profit.list" extends="admin.layout">
+		<put-attribute name="title" value="profit.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.profit.list.jsp"/>
+	</definition>
+	
+	<definition name="to.show.profit.detail" extends="admin.layout">
+		<put-attribute name="title" value="profit.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.profit.detail.jsp"/>
+	</definition>
+	
+	<definition name="to.show.profit.ranking" extends="admin.layout">
+		<put-attribute name="title" value="profit.management"/>
+		<put-attribute name="column-2" value="/WEB-INF/jsp/admin/to.show.profit.ranking.jsp"/>
+	</definition>
+	
+	
+	<definition name="ajax.get.company.menus" extends="json.layout">
+		<put-attribute name="column-1" value="/WEB-INF/jsp/admin/ajax.get.company.menus.jsp"/>
+	</definition>
+	<definition name="admin.get.role.menus.ajax" extends="json.layout">
+		<put-attribute name="column-1" value="/WEB-INF/jsp/admin/admin.get.role.menus.ajax.jsp"/>
+	</definition>
+	<definition name="ajax.get.company.branches" extends="json.layout">
+		<put-attribute name="column-1" value="/WEB-INF/jsp/admin/ajax.get.company.branches.jsp"/>
+	</definition>
+	<definition name="ajax.admin.company.roles" extends="json.layout">
+		<put-attribute name="column-1" value="/WEB-INF/jsp/admin/ajax.admin.company.roles.jsp"/>
+	</definition>
+	<definition name="ajax.admin.branch.units" extends="json.layout">
+		<put-attribute name="column-1" value="/WEB-INF/jsp/admin/ajax.admin.branch.units.jsp"/>
+	</definition>
+	
+</tiles-definitions>
