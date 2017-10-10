@@ -1,0 +1,196 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    color: #58666e;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: transparent;
+}
+
+div {
+    display: block;
+}
+
+.app {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+.app:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    width: inherit;
+    background-color: #eaeef7;
+    border: inherit;
+    content: "";
+}
+
+.app-header-fixed .app-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.app-header {
+    z-index: 1000;
+}
+
+.app-aside {
+    padding-top: 80px;
+    float: left;
+}
+
+.app-aside:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    width: inherit;
+    background-color: inherit;
+    border: inherit;
+    content: "";
+}
+
+.app-content {
+    padding-top: 80px;
+    height: 100%;
+    font-size: 13px;
+}
+
+.app-content:before,
+.app-content:after {
+    display: table;
+    content: " ";
+}
+
+.app-content:after {
+    clear: both;
+}
+
+.app-navbar {
+    height: 80px;
+    background-color: #132e41;
+}
+
+.app-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1005;
+    background-color: #597398;
+}
+
+@media (min-width: 768px) {
+    .app-aside {
+        width: 200px;
+    }
+
+    .app-content,
+    .app-footer {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    .app-aside {
+        display: none;
+    }
+
+    .app {
+        overflow-x: hidden;
+    }
+
+    .app-content {
+        -webkit-transition: -webkit-transform 0.2s ease;
+        -moz-transition: -moz-transform 0.2s ease;
+        -o-transition: -o-transform 0.2s ease;
+        transition: transform 0.2s ease;
+    }
+}
+
+.bg-dark {
+    color: #a6a8b1;
+    background-color: #597398;
+}
+
+.aside-app-div a {
+    display: block;
+    color: white;
+    padding: 10px;
+}
+
+.aside-app-menu-div {
+    height: 20px;
+}
+
+.aside-app-div .first-menu-a {
+    padding-left: 30px;
+    padding-right: 20px;
+    border-bottom: 1px solid #6682a9;
+}
+
+.aside-app-div .second-menu-a {
+    padding-left: 70px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+    border-bottom: 1px solid #3b4c63;
+}
+
+.menu-nav {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu-nav a{
+    text-decoration: none;
+}
+
+.menu-second-ul{
+    background-color: #425671;
+}
+
+.menu-selected {
+    background-color: #b63b4d;
+}
+
+.menu-hover {
+    background-color: #c14053;
+}
+
+.help-inline .message {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.help-inline i {
+    font-size: 16px;
+}
+
+.logo {
+    margin-left: 10px;
+    height: 80px;
+    width: 400px;
+    background: url("../icons/logo_admin.png") no-repeat;
+}
+
+.gridStyle {
+    height: 400px;
+    display: block;
+    position: relative;
+    margin: 10px 0px;
+}

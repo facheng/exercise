@@ -1,0 +1,77 @@
+body {
+    font-family: sans-serif;
+    background-color: #17374d;
+}
+
+.content-foot {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+.content {
+    position: absolute;
+    width: 450px;
+    height: 300px;
+    left: 50%;
+    top: 50%;
+    margin-left: -250px;
+    margin-top: -150px;
+    color: white;
+}
+
+.top {
+    text-align: center;
+    margin: 0 auto;
+    letter-spacing: 3px;
+}
+
+.bottom {
+    padding: 5px;
+    text-align: center;
+    color: ghostwhite;
+    font-size: 12px;
+}
+
+.login {
+    height: 260px;
+    color: white;
+    background-color: #132e41;
+    border: 1px solid #1d445f;
+    border-bottom-color: #0e212e;
+    border-right-color: #0e212e;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+
+}
+.login-top{
+    padding-left: 12px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1d445f;
+    margin-bottom: 20px;
+}
+.logo {
+    position: absolute;
+    top: 125px;
+    left: 30px;
+}
+
+.form-horizontal .control-label {
+    width: 50px;
+}
+
+.form-horizontal .controls {
+    margin-left: 60px;
+}
+
+.message-error {
+    color: crimson;
+    margin-top: 5px;
+    font-size: 12px;
+}
